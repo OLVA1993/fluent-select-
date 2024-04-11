@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\OlivierVanheste\\Development\\github\\fluent-select-\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D295430A-1731-4733-81CA-D3D1DB9789A3}|fluentui-select\\FluentTesting.csproj|c:\\users\\oliviervanheste\\development\\github\\fluent-select-\\fluentui-select\\components\\pages\\weatherforecasteditpanel.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D295430A-1731-4733-81CA-D3D1DB9789A3}|fluentui-select\\FluentTesting.csproj|solutionrelative:fluentui-select\\components\\pages\\weatherforecasteditpanel.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 124,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 471,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "WeatherForecastEditPanel.razor",
+              "DocumentMoniker": "C:\\Users\\OlivierVanheste\\Development\\github\\fluent-select-\\fluentui-select\\Components\\Pages\\WeatherForecastEditPanel.razor",
+              "RelativeDocumentMoniker": "fluentui-select\\Components\\Pages\\WeatherForecastEditPanel.razor",
+              "ToolTip": "C:\\Users\\OlivierVanheste\\Development\\github\\fluent-select-\\fluentui-select\\Components\\Pages\\WeatherForecastEditPanel.razor",
+              "RelativeToolTip": "fluentui-select\\Components\\Pages\\WeatherForecastEditPanel.razor",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABwAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-11T11:32:15.874Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Temp\\.testing\\fluentui-select\\fluentui-select\\FluentTesting.csproj": {}
+    "C:\\Users\\OlivierVanheste\\Development\\github\\fluent-select-\\fluentui-select\\FluentTesting.csproj": {}
   },
   "projects": {
-    "C:\\Temp\\.testing\\fluentui-select\\fluentui-select\\FluentTesting.csproj": {
+    "C:\\Users\\OlivierVanheste\\Development\\github\\fluent-select-\\fluentui-select\\FluentTesting.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Temp\\.testing\\fluentui-select\\fluentui-select\\FluentTesting.csproj",
+        "projectUniqueName": "C:\\Users\\OlivierVanheste\\Development\\github\\fluent-select-\\fluentui-select\\FluentTesting.csproj",
         "projectName": "FluentTesting",
-        "projectPath": "C:\\Temp\\.testing\\fluentui-select\\fluentui-select\\FluentTesting.csproj",
+        "projectPath": "C:\\Users\\OlivierVanheste\\Development\\github\\fluent-select-\\fluentui-select\\FluentTesting.csproj",
         "packagesPath": "C:\\Users\\OlivierVanheste\\.nuget\\packages\\",
-        "outputPath": "C:\\Temp\\.testing\\fluentui-select\\fluentui-select\\obj\\",
+        "outputPath": "C:\\Users\\OlivierVanheste\\Development\\github\\fluent-select-\\fluentui-select\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -78,7 +78,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

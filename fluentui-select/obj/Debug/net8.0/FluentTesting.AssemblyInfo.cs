@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FluentTesting")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+70e93aeca5b3f8f79139926963d1469c496f5f09")]
 [assembly: System.Reflection.AssemblyProductAttribute("FluentTesting")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FluentTesting")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

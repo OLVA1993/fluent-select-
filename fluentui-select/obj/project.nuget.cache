@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "p8w328Th1tVk6ILDNzhRIg6el6d6uyR9iVjTFrgiE+JaLT7MWaTwIY2o7pqucGevMtE/rGn8uW5ripJdLSqEtw==",
+  "dgSpecHash": "iLsoO49/S3kctfU/2k1JDI0wBRr97L4PDoQyPrj3jR9Q6/1xsuelX8BMuiBzC23U6m9nuwZBGJbGuJETzJ5P9A==",
   "success": true,
-  "projectFilePath": "C:\\Temp\\.testing\\fluentui-select\\fluentui-select\\FluentTesting.csproj",
+  "projectFilePath": "C:\\Users\\OlivierVanheste\\Development\\github\\fluent-select-\\fluentui-select\\FluentTesting.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\OlivierVanheste\\.nuget\\packages\\microsoft.aspnetcore.authorization\\8.0.4\\microsoft.aspnetcore.authorization.8.0.4.nupkg.sha512",
     "C:\\Users\\OlivierVanheste\\.nuget\\packages\\microsoft.aspnetcore.components\\8.0.4\\microsoft.aspnetcore.components.8.0.4.nupkg.sha512",

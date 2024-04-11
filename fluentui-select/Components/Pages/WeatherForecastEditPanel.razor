@@ -3,17 +3,22 @@
 
 @rendermode InteractiveServer
 
-<FluentSelect TOption="City"
-              Open="false"
-              Id="CustomerSelectBox"
-              Label="Best song"
-              Items="@Cities"
-              Height="200px"
-              Width="200px"
-              Multiple="true"
-              OptionText="@(p => p.Name)"
-              OptionSelected="@(p => Content.Cities.Contains(p))"
-              @bind-SelectedOptions="@Content.Cities" />
+<FluentStack Orientation="Orientation.Vertical">
+    <FluentLabel>Total number of selected Citites: @Content.Cities.ToList().Count</FluentLabel>
+
+    <FluentSelect TOption="City"
+                  Open="false"
+                  Id="CustomerSelectBox"
+                  Label="Cities:"
+                  Items="@Cities"
+                  Height="200px"
+                  Width="200px"
+                  Multiple="true"
+                  OptionText="@(p => p.Name)"
+                  OptionSelected="@(p => Content.Cities.Contains(p))"
+                  @bind-SelectedOptions="@Content.Cities" />    
+</FluentStack>
+
 
 @code {
 
