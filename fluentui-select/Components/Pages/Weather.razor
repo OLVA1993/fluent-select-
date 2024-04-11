@@ -1,0 +1,106 @@
+﻿@inject IDialogService DialogService
+
+@page "/weather"
+
+<PageTitle>Weather</PageTitle>
+
+@if (forecasts == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <FluentDataGrid Id="weathergrid" Items="@forecasts" GridTemplateColumns="1fr 1fr 1fr 2fr" TGridItem="WeatherForecast">
+        <PropertyColumn Title="Date" Property="@(c => c!.Date)" Sortable="true" Align="Align.Start"/>
+        <PropertyColumn Title="Temp. (C)" Property="@(c => c!.TemperatureC)" Sortable="true" Align="Align.Center"/>
+        <PropertyColumn Title="Temp. (F)" Property="@(c => c!.TemperatureF)" Sortable="true" Align="Align.Center"/>
+        <PropertyColumn Title="Summary" Property="@(c => c!.Summary)" Sortable="true" Align="Align.End"/>
+        <TemplateColumn Title="Actions" Align="@Align.End">
+            <FluentButton IconEnd="@(new Icons.Regular.Size16.Edit())" OnClick="@(e => HandleEditClickAsync(context))" />
+        </TemplateColumn>            
+    </FluentDataGrid>
+}
+
+@code {
+    private IQueryable<WeatherForecast>? forecasts;
+
+    private WeatherForecast forecastEdit;
+    private IDialogReference? _dialog;
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Simulate asynchronous loading to demonstrate a loading indicator
+        await Task.Delay(500);
+
+        var startDate = DateOnly.FromDateTime(DateTime.Now);
+        var summaries = new[] { "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching" };
+
+        forecasts = Enumerable.Range(1, 5).Select(index => new WeatherForecast
+        {
+            Date = startDate.AddDays(index),
+            TemperatureC = Random.Shared.Next(-20, 55),
+            Summary = summaries[Random.Shared.Next(summaries.Length)],
+            // Add list of 2-5 cities from the Cities list
+            Cities = Resources.Cities.OrderBy(c => Guid.NewGuid()).Take(Random.Shared.Next(4, 8)).ToList()
+        }).AsQueryable();
+    }
+
+    async Task HandleEditClickAsync(WeatherForecast context)
+    {
+        forecastEdit = new WeatherForecast
+        {
+            Date = context.Date,
+            TemperatureC = context.TemperatureC,
+            Summary = context.Summary,
+            Cities = context.Cities
+        };
+
+        DialogParameters<WeatherForecast> parameters = new()
+        {
+            Content = forecastEdit,
+            Title = $"Edit Forecast",
+            Alignment = HorizontalAlignment.Right,
+            Modal = false,
+            ShowDismiss = false,
+            PrimaryAction = "Save",
+            SecondaryAction = "Cancel",
+            Width = "500px",
+        };
+
+        _dialog = await DialogService.ShowPanelAsync<WeatherForecastEditPanel>(forecastEdit, parameters);
+
+        DialogResult result = await _dialog.Result;
+
+        await HandlePanelAsync(result);
+    }
+
+    private async Task HandlePanelAsync(DialogResult result)
+    {
+        if (result.Cancelled)
+        {
+            return;
+        }
+
+        if (result.Data is not null)
+        {
+            var weatherForecast = result.Data as WeatherForecast;
+            
+            // check the list inside the object, it now contains an extra value 
+            // instead of the updated list of cities
+
+            // call downstream api with post request
+            if (weatherForecast != null)
+            {
+                // loop all the cities for the updated forecast and print citites
+                foreach (var city in weatherForecast.Cities)
+                {
+                    Console.WriteLine(city.Name);
+                }
+            }
+
+            return;
+        }
+    }
+
+    
+}

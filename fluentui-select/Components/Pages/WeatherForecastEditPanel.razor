@@ -1,0 +1,41 @@
+﻿@using static FluentTesting.Components.Pages.Weather
+@implements IDialogContentComponent<WeatherForecast>
+
+@rendermode InteractiveServer
+
+<FluentSelect TOption="City"
+              Open="false"
+              Id="CustomerSelectBox"
+              Label="Best song"
+              Items="@Cities"
+              Height="200px"
+              Width="200px"
+              Multiple="true"
+              OptionText="@(p => p.Name)"
+              OptionSelected="@(p => Content.Cities.Contains(p))"
+              @bind-SelectedOptions="@Content.Cities" />
+
+@code {
+
+    [Parameter]
+    public WeatherForecast Content { get; set; } = default!;
+
+    // this works
+    // private IQueryable<City> Cities = Resources.Cities.AsQueryable();
+
+    // this doesn't work correctly
+    private IQueryable<City> Cities = new List<City>
+    {
+        new City { Name = "Seattle", Code = "98101" },
+        new City { Name = "Redmond", Code = "98052" },
+        new City { Name = "Bellevue", Code = "98004" },
+        new City { Name = "Kirkland", Code = "98033" },
+        new City { Name = "Issaquah", Code = "98029" },
+        new City { Name = "Sammamish", Code = "98074" },
+        new City { Name = "Renton", Code = "98055" },
+        new City { Name = "Kent", Code = "98030" },
+        new City { Name = "Auburn", Code = "98002" },
+        new City { Name = "Federal Way", Code = "98003" }
+    }.AsQueryable();
+
+}
